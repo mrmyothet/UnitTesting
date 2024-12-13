@@ -2,6 +2,7 @@ using UnitTesting.Fundamentals;
 
 namespace UnitTesting.UnitTests;
 
+[TestFixture]
 public class ReservationTests
 {
     [Test]
@@ -14,7 +15,8 @@ public class ReservationTests
         var result = reservation.CanBeCancelledBy(new User { IsAdmin = true });
 
         //Assert
-        Assert.That(result == true);
+        //Assert.That(result == true);
+        Assert.That(result, Is.True);
     }
 
     [Test]
@@ -25,7 +27,8 @@ public class ReservationTests
 
         var result = reservation.CanBeCancelledBy(user);
 
-        Assert.True(result == true);
+        //Assert.True(result == true);
+        Assert.That(result, Is.True);
     }
 
     [Test]
@@ -35,6 +38,7 @@ public class ReservationTests
 
         var result = reservation.CanBeCancelledBy(new User());
 
-        Assert.That(result == false);
+        //Assert.That(result == false);
+        Assert.That(result, Is.True);
     }
 }
