@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTesting.Fundamentals;
+namespace Testing.Fundamentals;
 
 public class Reservation
 {
@@ -12,7 +12,7 @@ public class Reservation
 
     public bool CanBeCancelledBy(User user)
     {
-        return (user.IsAdmin || MadeBy == user);
+        return user.IsAdmin || MadeBy == user;
     }
 }
 
