@@ -38,7 +38,6 @@ public class ReservationTests
 
         var result = reservation.CanBeCancelledBy(new User());
 
-        //Assert.That(result == false);
-        Assert.That(result, Is.True);
+        Assert.That(result, Is.False);
     }
 }
